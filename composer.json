@@ -1,0 +1,54 @@
+{
+    "name": "infinitypaul/laravel-guarded-submit",
+    "description": "A Laravel Package for preventing duplicate form submit",
+    "keywords": [
+        "infinitypaul",
+        "laravel-guarded-submit"
+    ],
+    "homepage": "https://github.com/infinitypaul/laravel-guarded-submit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Paul Edward",
+            "email": "infinitypaul@live.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Infinitypaul\\LaravelGuardedSubmit\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Infinitypaul\\LaravelGuardedSubmit\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Infinitypaul\\LaravelGuardedSubmit\\LaravelGuardedSubmitServiceProvider"
+            ],
+            "aliases": {
+                "LaravelGuardedSubmit": "Infinitypaul\\LaravelGuardedSubmit\\LaravelGuardedSubmitFacade"
+            }
+        }
+    }
+}
